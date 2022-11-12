@@ -210,7 +210,9 @@ insert into emp(empno,ename,sal,deptno)
 values(9010,'thomas',3300,20);
 select * from emp;
 select * from emp_log;
-
+select * from memo;
+delete memo where idx=23;
+commit;
 --실습계정생성
 --CREATE USER MULTI
 --IDENTIFIED BY tiger;
