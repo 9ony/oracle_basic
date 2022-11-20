@@ -46,3 +46,9 @@ select * from (
 -- ...
 -- end= cpage * pageSize;
 -- start = end - (pageSize-1)
+
+select count(num) cnt from board where subject like '%'||'¾È³ç'||'%';
+
+select * from member;
+select member_idx_sq.nextval from dual;
+select * from user_sequences;
