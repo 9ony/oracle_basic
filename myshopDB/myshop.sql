@@ -506,3 +506,6 @@ select member.*, decode(status,0,'활동회원',-1,'정지회원',-2,'탈퇴회원',9,'관리�
 from member where status >-2;
 
 select * from memberView;
+
+---------------------------------------------------
+create sequence product_seq nocache;
