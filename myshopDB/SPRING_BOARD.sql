@@ -24,3 +24,30 @@ nocache;
 
 select * from spring_board order by num desc;
 update spring_board set subject='<script>alert("力格俊 胶农赋飘");</script>' where num=4;
+commit;
+
+select * from spring_board order by refer desc,sunbun asc;
+
+select * from (
+select rownum rn, a.* from
+ (select * from spring_board order by refer desc,sunbun asc) a
+ )
+ where rn between 1 and 5;
+
+--其捞隆贸府 规过2 
+ select * from (
+ select row_number() over(order by refer desc, sunbun asc) rn, spring_board.* from spring_board
+)
+ where rn between 1 and 5;
+ 
+-- --何殿龋肺
+-- where rn >0 and rn<6;
+-- 
+-- cpage    pageSize  start  end
+-- 1          5        0      6
+-- 2          5        5      11
+-- 3          5        10      16
+-- 4          5        15      21
+-- 
+-- start = (cpage-1)*pageSize;
+-- end = start+(pageSize+1);
